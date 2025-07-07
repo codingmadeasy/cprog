@@ -1,3 +1,6 @@
+/*According to the Gregorian calendar, it was Monday on the date 
+01/01/01. If any year is input through the keyboard write a program 
+to find out what is the day on 1st January of this year. */
 #include <stdio.h>
 int isLeapYear(int year)
 {
@@ -8,14 +11,14 @@ int isLeapYear(int year)
 }
 int main()
 {
-    int year,dayIndex=0;//0 for monday
+    int i,year,dayIndex=0;//0 for monday
     int daysInYear;
     char *days[]={"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
     printf("Enter the year: ");
     scanf("%d", &year);
-    for (int y = 1; y < year; y++)
+    for (i=1;i<year;i++)
     {
-        if (isLeapYear(y))
+        if (isLeapYear(i))
             dayIndex+=366;//if leap year add 1 extra day
         else
             dayIndex+=365;
